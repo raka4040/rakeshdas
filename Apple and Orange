@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+    int s,t,m,n,a,b,p[100000],q[100000],i,c=0,d=0;
+    scanf("%d%d",&s,&t);
+    scanf("%d%d",&a,&b);
+    scanf("%d%d",&m,&n);
+    for(i=0;i<m;i++)
+    {
+        scanf("%d",&p[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&q[i]);
+    }
+    for(i=0;i<m;i++)
+    {
+        p[i]=p[i]+a;
+    }
+    for(i=0;i<n;i++)
+    {
+        q[i]=q[i]+b;
+    }
+    for(i=0;i<m;i++)
+    {
+        if(p[i]>=s&&p[i]<=t)
+        {
+            c=c+1;
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        if(q[i]>=s&&q[i]<=t)
+        {
+            d=d+1;
+        }
+    }
+    printf("%d\n%d",c,d);
+    return 0;
+}
