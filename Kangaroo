@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int i,a,b,p,q,r=0,s=0;
+    scanf("%d%d%d%d",&a,&p,&b,&q);
+    for(i=1;i<100000;i++)
+    {
+        r=a+(p*i);
+        s=b+(q*i);
+        if(r==s)
+        {
+            printf("YES");
+            break;
+            
+        }
+        
+    }
+    if(r!=s)
+    {
+        printf("NO");
+    }
+    return 0;
+}
